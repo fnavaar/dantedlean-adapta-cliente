@@ -8,7 +8,7 @@
 - **Fase atual:** Fase 1 — entrada de demanda, projeto e lista de materiais · aberta em 2026-08-17 · reunião de fechamento a definir
 - **Objetivo desta fase:** conduzir um pedido/projeto de teste até a validação da Engenharia e uma lista de materiais versionada, registrando o baseline.
 - **No prazo?** Em teste — handoff autorizado com ressalvas; tasks ainda bloqueadas por decisões e acessos pendentes.
-- **Empacotamento:** `05-Sistema/` incorporado como conteúdo regular no commit local `b358605a`; inclui 88 arquivos, inclusive o `.env` autorizado para publicação privada.
+- **Empacotamento:** `05-Sistema/` funciona como catálogo de sistemas; `p-gina-em-branco-ai2rz8hkd` está registrado como submódulo na branch `main`, e cada novo sistema deverá ocupar sua própria pasta/submódulo.
 
 ## Progresso da fase
 
