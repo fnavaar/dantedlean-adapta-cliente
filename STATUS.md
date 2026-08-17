@@ -8,6 +8,7 @@
 - **Fase atual:** Fase 1 — entrada de demanda, projeto e lista de materiais · aberta em 2026-08-17 · reunião de fechamento a definir
 - **Objetivo desta fase:** conduzir um pedido/projeto de teste até a validação da Engenharia e uma lista de materiais versionada, registrando o baseline.
 - **No prazo?** Em teste — handoff autorizado com ressalvas; tasks ainda bloqueadas por decisões e acessos pendentes.
+- **Empacotamento:** `05-Sistema/` incorporado como conteúdo regular no commit local `b358605a`; inclui 88 arquivos, inclusive o `.env` autorizado para publicação privada.
 
 ## Progresso da fase
 
@@ -20,6 +21,7 @@
 |---|---|---|---|
 | Contratos, acessos e decisões da Fase 1 | 2026-08-17 | Consultor/cliente | Fechar fontes, papéis, fixtures e permissões antes da execução |
 | Bypass de teste | 2026-08-17 | Consultor | Validar o handoff estrutural; não tratar como aprovação produtiva |
+| Repositório remoto privado | 2026-08-17 | Consultor/cliente | Criar `dantedlean/adapta-cliente` antes do push; a sessão atual não expõe criação de repositório nem browser autenticado |
 
 ## Entregas concluídas
 
