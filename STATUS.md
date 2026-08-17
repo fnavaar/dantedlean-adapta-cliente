@@ -21,7 +21,7 @@
 |---|---|---|---|
 | Contratos, acessos e decisões da Fase 1 | 2026-08-17 | Consultor/cliente | Fechar fontes, papéis, fixtures e permissões antes da execução |
 | Bypass de teste | 2026-08-17 | Consultor | Validar o handoff estrutural; não tratar como aprovação produtiva |
-| Repositório remoto privado | 2026-08-17 | Consultor/cliente | Criar `dantedlean/adapta-cliente` antes do push; a sessão atual não expõe criação de repositório nem browser autenticado |
+| Publicação GitHub | 2026-08-17 | Adapta Labs | `fnavaar/dantedlean-adapta-cliente` publicado; o superprojeto aguarda revisão do PR #1 |
 
 ## Entregas concluídas
 
