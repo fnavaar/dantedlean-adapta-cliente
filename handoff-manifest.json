@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "adapta-cliente-handoff/v1",
+  "phase": 1,
+  "versions": {
+    "package": "0.1.0",
+    "adapta": "0.7.0",
+    "adaptaCliente": "0.2.0"
+  },
+  "generatedAt": "2026-08-17T14:17:11.789Z",
+  "files": [
+    {
+      "path": "04_fase-atual/README.md",
+      "sha256": "57843f15414253dfbcc46b12fc0860f4aa0481fefdd8440eca68b80a3663f4cc",
+      "classification": "template-publico"
+    },
+    {
+      "path": "04_fase-atual/fase.md",
+      "sha256": "359e9cad9d285ff204b14762aad19fe7abccdc7739581df89183af6391489dd1",
+      "classification": "fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f1-001-entrada-elegibilidade.md",
+      "sha256": "bbe1e33d28a05da67a0e1587bd23bd5b61e6dfda389fff4b2d3609c6b8c22e84",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f1-002-gate-engenharia.md",
+      "sha256": "78c13ce66c4bcf0af099cd7ea82f9627951537964f8df1440a6df36d2b198a32",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f1-003-lista-versionada.md",
+      "sha256": "14e9fdd10cdb9d0793702e8745369336d10af09b98f709bc821c43c08b03ed31",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f1-004-consistencia-lista.md",
+      "sha256": "08a36e1f84a72df5fd6ac09041ff2a1cee73d4e7fa76211fd1b63873800003d3",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-f1-005-baseline-medicao.md",
+      "sha256": "b74cdb654319959c56c0aac84570e8d2cb534dcbe58d703ec17992950baa08d5",
+      "classification": "spec-fase-atual"
+    }
+  ]
+}
