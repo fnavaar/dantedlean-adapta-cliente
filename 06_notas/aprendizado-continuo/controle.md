@@ -1,0 +1,1 @@
+- 2026-09-17T11:16:00-03:00 · task F1-T002 · capturado: AP-2026-09-17-1116-publicacao-skip.md (preview do Skip exigiu sincronização/publicação interna após commit GitHub)
