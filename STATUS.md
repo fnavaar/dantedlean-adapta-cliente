@@ -8,12 +8,12 @@
 - **Fase atual:** Fase 1 — entrada de demanda, projeto e lista de materiais · aberta em 2026-08-26
 - **Objetivo desta fase:** conduzir um pedido/projeto de teste até a validação da Engenharia e uma lista de materiais versionada, registrando o baseline.
 - **No prazo?** Em andamento — F1-T001 e F1-T002 concluídas e liberadas.
-- **Atenção (regularização em curso):** a F1-T003 foi implementada em 2026-09-17 sem o ciclo de autorização. Está **em regularização** — a liberação exige evidências de TDD, teste humano do champion e aceite do consultor. O ciclo de liberação passa a valer para esta e todas as tasks posteriores (ver `03_documentos/liberacao-de-tasks.md`).
+- **F1-T003 (decisão do consultor em 2026-09-30):** aceita **retroativamente com ressalvas** — a implementação de 17/09 é mantida. Para a liberação final faltam: (1) evidências de TDD reexecutadas (bordas) e (2) teste humano do André. Registrados os dois, a task é liberada (recibo em `03_documentos/liberacao-de-tasks.md`).
 
 ## Progresso da fase
 
-- **Tasks:** 2/15 liberadas (13%) · 1 em regularização (F1-T003) · 12 bloqueadas
-- **Próxima task:** definida após a decisão do consultor sobre a liberação da F1-T003; nenhuma task posterior começa antes disso.
+- **Tasks:** 2/15 liberadas (13%) · 1 em regularização aceita com ressalvas (F1-T003 — falta evidências + teste humano) · 12 bloqueadas
+- **Próxima task:** após registrar evidências e teste humano da F1-T003, ela é liberada e a próxima elegível segue a cadeia (F1-T005 depende também de F1-T004).
 
 ## Travas ativas
 

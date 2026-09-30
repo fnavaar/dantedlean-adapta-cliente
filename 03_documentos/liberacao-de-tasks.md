@@ -21,29 +21,29 @@
 informação de alguém, a pergunta é embutida na própria task e respondida junto com a abertura
 dela (ver quadro abaixo).
 
-## F1-T003 — regularização (histórico do ocorrido)
+## F1-T003 — regularização (histórico e decisão)
 
 - Implementada em **2026-09-17 15:23** (commit `cdccbe5`, no sistema `p-gina-em-branco-ai2rz8hkd`:
   `domain.ts`, `fixtures.ts`, `Index.tsx` — bordas e estados da entrada de demanda) **antes** do
   ciclo de autorização. O estado oficial declarava: "a próxima task elegível é F1-T003 e exige
   novo ciclo de análise/autorização".
-- Não há registro de autorização prévia, evidências de TDD nem teste humano para esta task.
-- **Status: em regularização.** Para liberar, são necessários os três itens abaixo — decididos
-  pelo consultor (pergunta embutida na abertura desta regularização):
-  - **Evidências de TDD** das bordas (reenvio não duplica; inválida não avança; falha é
-    recuperável e sem efeitos de compra/liberação) — reexecução das provas com capturas/logs;
-  - **Teste humano do champion** registrado com data e resultado;
-  - **Aceite do consultor** sobre o tratamento do ciclo retroativo.
+- Não havia registro de autorização prévia, evidências de TDD nem teste humano para esta task.
+- **Decisão do consultor (2026-09-30): aceite retroativo com ressalvas** — a implementação é
+  mantida. Para a **liberação final**, restam dois itens (registrar no `changelog.md`):
+  - **Evidências de TDD reexecutadas** das bordas (reenvio não duplica; inválida não avança;
+    falha é recuperável e sem efeitos de compra/liberação) — com capturas/logs;
+  - **Teste humano do champion (André)** com data e resultado.
+- Feitos os dois itens, preencher o recibo abaixo e marcar F1-T003 como **liberada**.
 
 ## Insumos embutidos — respondidos junto com a abertura da task
 
-| Task | Insumo | Pessoa | Pergunta que vai junto com a task |
+| Task | Insumo | Pessoa | Situação |
 |---|---|---|---|
-| F1-T003 | Tratamento do ciclo retroativo | Consultor (Navaar) | Aceitar retroativamente com ressalvas (reexecutar provas + teste humano), exigir ciclo completo, ou reverter a implementação? |
-| F1-T004 | Checklist, alçada substituta, fonte/formato do projeto e matriz de permissões | Consultor + Engenharia | Qual é o checklist mínimo de aprovação? Quem aprova na ausência do responsável? Qual a fonte/formato do projeto? |
-| F1-T007 | Contrato da lista | Consultor (Navaar) | Como fica o versionamento e o formato da origem? A IA sugere (com revisão humana) ou não participa? |
-| F1-T010 | Catálogo e substituição | PCP | Qual unidade de medida por item? Como tratar duplicidade? Qual política de substituição? |
-| F1-T013 | Baseline | PCP | Qual intervalo, marcos, população e timezone? Qual meta e quem responde pelo baseline? |
+| F1-T003 | Tratamento do ciclo retroativo | Consultor (Navaar) | **RESPONDIDO 2026-09-30:** aceitar retroativamente com ressalvas (manter implementação; reexecutar provas + teste humano para liberar) |
+| F1-T004 | Checklist, alçada substituta, fonte/formato do projeto e matriz de permissões | Consultor + Engenharia | pendente — qual checklist mínimo? quem aprova na ausência? qual fonte/formato do projeto? |
+| F1-T007 | Contrato da lista | Consultor (Navaar) | pendente — versionamento, formato da origem, papel da IA (sugestão com revisão × não uso) |
+| F1-T010 | Catálogo e substituição | PCP | pendente — unidade por item, regra de duplicidade, política de substituição |
+| F1-T013 | Baseline | PCP | pendente — intervalo, marcos, população, timezone, meta e responsável |
 
 ## Recibo de liberação (modelo — preencher por task)
 
@@ -55,13 +55,23 @@ dela (ver quadro abaixo).
 - **Aceite do consultor:**
 - **Próxima task elegível:**
 
+### Recibo — F1-T003 (em preenchimento)
+
+- **Task:** F1-T003 — bordas, duplicidade, pendência, cancelamento e prova final da entrada
+- **Liberada em:** pendente (libera quando os dois itens abaixo forem registrados)
+- **Autorização prévia (data e quem):** retroativa — aceite do consultor Navaar em 2026-09-30 (com ressalvas; violação original de 2026-09-17 registrada acima)
+- **Evidências de TDD (o que foi rodado/demonstrado):** PENDENTE — reexecutar GREEN de bordas + REFACTOR/REGRESSÃO com capturas/logs
+- **Teste humano (quem, quando, resultado):** PENDENTE — André
+- **Aceite do consultor:** aceito retroativamente com ressalvas — 2026-09-30
+- **Próxima task elegível:** definir após a liberação (F1-T005 depende também de F1-T004)
+
 ## Registro de liberações
 
 | Task | Data | Autorização prévia | Evidências de TDD | Teste humano | Aceite do consultor | Situação |
 |---|---|---|---|---|---|---|
 | F1-T001 | 2026-08-26 | registrada (decisões documentadas) | registro da decisão + fixture | — (task de decisão do consultor) | consultor (própria task) | liberada |
 | F1-T002 | 2026-09-17 | fluxo da decomposição | lint/build/domínio/preview registrados | André, 2026-09-17, aprovado | consultor (revisão de estado) | liberada |
-| F1-T003 | — | AUSENTE (violação registrada) | não registradas | não registrado | pendente | **em regularização** |
+| F1-T003 | pendente | retroativa — aceite 2026-09-30 (com ressalvas) | PENDENTE (reexecução) | PENDENTE (André) | **aceito retroativamente com ressalvas — 2026-09-30** | **em liberação — falta evidências + teste humano** |
 
 ## Ambiente de trabalho (pinado)
 
@@ -77,4 +87,4 @@ dela (ver quadro abaixo).
 
 | Projeto | Repositório | Situação | Decisão do consultor |
 |---|---|---|---|
-| Compass 2.1 — Painel de Entregas | `dantedlean/compass-2-1---painel-de-entregas-fffb0lb7b` | criado e publicado em produção em 2026-09-30; escopo de faturamento/entregas | pendente (registrar como paralelo ou trazer ao plano) |
+| Compass 2.1 — Painel de Entregas | `dantedlean/compass-2-1---painel-de-entregas-fffb0lb7b` | publicado em produção em 2026-09-30; escopo de faturamento/entregas | **2026-09-30: só higiene por enquanto** — retirada do `.env` pedida ao Dante; destino (paralelo × plano) decide depois |
