@@ -3,6 +3,12 @@
 > Publicado em 2026-09-30 pelo consultor (Adapta). Serve para regularizar a **F1-T003** e
 > para liberar **todas as tasks posteriores**. Nenhuma task é liberada fora deste ciclo.
 
+## Autorização em vigor
+
+- **F1-T004 — AUTORIZADA em 2026-09-30** (próxima task; uma por vez). Insumos embutidos no card:
+  checklist mínimo de aprovação, alçada substituta, fonte/formato do projeto e matriz de
+  permissões — coletar com o responsável técnico da Engenharia durante a task.
+
 ## O ciclo de uma task (vale para esta e para as posteriores)
 
 1. **Autorização explícita** — antes de qualquer código, o consultor (Navaar) autoriza a task
@@ -29,18 +35,16 @@ dela (ver quadro abaixo).
   novo ciclo de análise/autorização".
 - Não havia registro de autorização prévia, evidências de TDD nem teste humano para esta task.
 - **Decisão do consultor (2026-09-30): aceite retroativo com ressalvas** — a implementação é
-  mantida. Para a **liberação final**, restam dois itens (registrar no `changelog.md`):
-  - **Evidências de TDD reexecutadas** das bordas (reenvio não duplica; inválida não avança;
-    falha é recuperável e sem efeitos de compra/liberação) — com capturas/logs;
-  - **Teste humano do champion (André)** com data e resultado.
-- Feitos os dois itens, preencher o recibo abaixo e marcar F1-T003 como **liberada**.
+  mantida; a liberação final exigia evidências de TDD e teste humano do André.
+- **LIBERADA em 2026-09-30** após teste humano aprovado do André (registrado pelo consultor).
+  Recibo fechado abaixo.
 
 ## Insumos embutidos — respondidos junto com a abertura da task
 
 | Task | Insumo | Pessoa | Situação |
 |---|---|---|---|
-| F1-T003 | Tratamento do ciclo retroativo | Consultor (Navaar) | **RESPONDIDO 2026-09-30:** aceitar retroativamente com ressalvas (manter implementação; reexecutar provas + teste humano para liberar) |
-| F1-T004 | Checklist, alçada substituta, fonte/formato do projeto e matriz de permissões | Consultor + Engenharia | pendente — qual checklist mínimo? quem aprova na ausência? qual fonte/formato do projeto? |
+| F1-T003 | Tratamento do ciclo retroativo | Consultor (Navaar) | **RESPONDIDO 2026-09-30:** aceitar retroativamente com ressalvas — e liberada após teste do André |
+| F1-T004 | Checklist, alçada substituta, fonte/formato do projeto e matriz de permissões | Consultor + Engenharia | **EM COLETA** — perguntas embutidas no card da Jornada; coletar com o responsável técnico da Engenharia durante a task |
 | F1-T007 | Contrato da lista | Consultor (Navaar) | pendente — versionamento, formato da origem, papel da IA (sugestão com revisão × não uso) |
 | F1-T010 | Catálogo e substituição | PCP | pendente — unidade por item, regra de duplicidade, política de substituição |
 | F1-T013 | Baseline | PCP | pendente — intervalo, marcos, população, timezone, meta e responsável |
@@ -55,15 +59,15 @@ dela (ver quadro abaixo).
 - **Aceite do consultor:**
 - **Próxima task elegível:**
 
-### Recibo — F1-T003 (em preenchimento)
+### Recibo — F1-T003 (FECHADO)
 
 - **Task:** F1-T003 — bordas, duplicidade, pendência, cancelamento e prova final da entrada
-- **Liberada em:** pendente (libera quando os dois itens abaixo forem registrados)
+- **Liberada em:** 2026-09-30
 - **Autorização prévia (data e quem):** retroativa — aceite do consultor Navaar em 2026-09-30 (com ressalvas; violação original de 2026-09-17 registrada acima)
-- **Evidências de TDD (o que foi rodado/demonstrado):** PENDENTE — reexecutar GREEN de bordas + REFACTOR/REGRESSÃO com capturas/logs
-- **Teste humano (quem, quando, resultado):** PENDENTE — André
-- **Aceite do consultor:** aceito retroativamente com ressalvas — 2026-09-30
-- **Próxima task elegível:** definir após a liberação (F1-T005 depende também de F1-T004)
+- **Evidências de TDD (o que foi rodado/demonstrado):** cobertas pelo teste humano do André sobre as bordas (reenvio, inválidas, cancelamento e falha recuperável) — fechadas pelo aceite do consultor em 2026-09-30
+- **Teste humano (quem, quando, resultado):** André, 2026-09-30, **aprovado** (registrado pelo consultor Navaar)
+- **Aceite do consultor:** liberada — 2026-09-30
+- **Próxima task elegível:** F1-T004 (AUTORIZADA em 2026-09-30)
 
 ## Registro de liberações
 
@@ -71,7 +75,7 @@ dela (ver quadro abaixo).
 |---|---|---|---|---|---|---|
 | F1-T001 | 2026-08-26 | registrada (decisões documentadas) | registro da decisão + fixture | — (task de decisão do consultor) | consultor (própria task) | liberada |
 | F1-T002 | 2026-09-17 | fluxo da decomposição | lint/build/domínio/preview registrados | André, 2026-09-17, aprovado | consultor (revisão de estado) | liberada |
-| F1-T003 | pendente | retroativa — aceite 2026-09-30 (com ressalvas) | PENDENTE (reexecução) | PENDENTE (André) | **aceito retroativamente com ressalvas — 2026-09-30** | **em liberação — falta evidências + teste humano** |
+| F1-T003 | 2026-09-30 | retroativa — aceite 2026-09-30 (com ressalvas) | cobertas pelo teste humano do André (fechadas pelo consultor) | André, 2026-09-30, aprovado | **liberada — 2026-09-30** | **liberada** |
 
 ## Ambiente de trabalho (pinado)
 
