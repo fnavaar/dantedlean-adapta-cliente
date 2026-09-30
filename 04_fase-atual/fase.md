@@ -1,7 +1,7 @@
 # Fase 1 — Tarefas gerais
 
-**Estado:** 15 tasks decompostas; 2 concluídas, 13 bloqueadas.
-**Regra:** nenhuma task pode ser executada até a pré-condição e o ponto de parada descritos serem satisfeitos.
+**Estado:** 15 tasks decompostas; 2 liberadas (F1-T001, F1-T002), 1 em regularização (F1-T003), 12 bloqueadas.
+**Regra:** nenhuma task pode ser executada até a pré-condição e o ponto de parada descritos serem satisfeitos. **Ciclo de liberação obrigatório:** autorização explícita do consultor → execução → evidências de TDD → teste humano do champion → recibo em `03_documentos/liberacao-de-tasks.md`.
 
 ## Tasks — tabela operacional
 
@@ -9,7 +9,7 @@
 |---|---|---|---|---|---|---|---|---|---|
 | F1-T001 | Confirmar fonte, campos mínimos, papéis, fixture e decisão sobre pré-fluxo pedido → projeto | Consultor | SPEC-1-001 § Contexto e decisões fechadas; § Dados e integrações | Contrato de entrada e matriz de permissões registrados e aprovados | Conferir contrato canônico e cenário de fixture da SPEC-1-001 | Registro da decisão, fixture sem dado pessoal e matriz de acesso | Autorização humana para tratar o bloqueio; participantes disponíveis | Parar se fonte, campos ou permissão permanecerem ambíguos | ✅ concluída |
 | F1-T002 | Implementar o caminho principal de entrada e criação/vínculo idempotente do contexto | Ethos | SPEC-1-001 § Fluxo e regras; CA-1-001; TDD GREEN | Fixture válida gera exatamente um contexto em `aguardando_engenharia` | TDD GREEN: fixture válida e listagem do contexto | Captura, ID do contexto, histórico e `pnpm lint`/`pnpm build` | F1-T001 concluída; ambiente de teste autorizado | Parar antes de qualquer API externa ou alteração de credencial | ✅ concluída — 2026-09-17 |
-| F1-T003 | Implementar bordas, duplicidade, pendência, cancelamento e prova final da entrada | Ethos | SPEC-1-001 § Fluxo e regras; CA-1-002 a CA-1-005; TDD REFACTOR/REGRESSÃO | Reenvio não duplica; inválida não avança; falha é recuperável e sem efeitos de compra/liberação | TDD GREEN de bordas + REFACTOR/REGRESSÃO | Capturas, logs, histórico idempotente e saída dos comandos | F1-T002 concluída; fixtures de duplicidade, incompleta e cancelada | Parar se for necessário decidir regra comercial ou integrar ERP | bloqueada |
+| F1-T003 | Implementar bordas, duplicidade, pendência, cancelamento e prova final da entrada | Ethos | SPEC-1-001 § Fluxo e regras; CA-1-002 a CA-1-005; TDD REFACTOR/REGRESSÃO | Reenvio não duplica; inválida não avança; falha é recuperável e sem efeitos de compra/liberação | TDD GREEN de bordas + REFACTOR/REGRESSÃO | Capturas, logs, histórico idempotente e saída dos comandos | F1-T002 concluída; fixtures de duplicidade, incompleta e cancelada | Parar se for necessário decidir regra comercial ou integrar ERP | ⚠️ em regularização — implementada em 2026-09-17 sem ciclo de autorização; liberação exige evidências de TDD + teste humano do champion + aceite do consultor (ver `03_documentos/liberacao-de-tasks.md`) |
 | F1-T004 | Confirmar checklist, alçada substituta, fonte/formato do projeto e matriz de permissões da Engenharia | Consultor | SPEC-1-002 § Contexto e decisões fechadas; § Dados e integrações | Checklist, decisão de estados e acesso à fonte do projeto registrados | Exercitar pacote completo, incompleto e fonte indisponível | Checklist aprovado, matriz de papéis e fixture/referência de projeto | Autorização humana; responsável técnico disponível | Parar se o responsável ou a regra de aprovação não forem definidos | bloqueada |
 | F1-T005 | Implementar fila e caminho principal de decisão da Engenharia | Ethos | SPEC-1-002 § Fluxo e regras; CA-1-006 e CA-1-007; TDD GREEN | Engenharia aprova um contexto completo e não aprovado não habilita lista | TDD GREEN: aprovado, devolvido e bloqueado | Captura da fila, decisão, autor, timestamp e evento | F1-T002 e F1-T004 concluídas | Parar antes de ler/escrever SolidWorks produtivo | bloqueada |
 | F1-T006 | Implementar permissões, checklist obrigatório, revisão e prova de falhas do gate | Ethos | SPEC-1-002 § Fluxo e regras; CA-1-008 a CA-1-010; TDD REFACTOR/REGRESSÃO | Ações sem papel/checklist são recusadas; reenvio preserva histórico; fonte ausente bloqueia | TDD GREEN de permissão/fonte + REFACTOR/REGRESSÃO | Respostas negativas, histórico de revisão, logs e build/lint | F1-T005 concluída; usuários de teste autorizados | Parar se surgir decisão nova de alçada ou revogação | bloqueada |
@@ -27,5 +27,15 @@
 
 - **Leva de decisões/contratos:** F1-T001 ✅ CONCLUÍDA; F1-T004, F1-T007, F1-T010 e F1-T013 continuam bloqueadas.
 - **Ordem parcial das cadeias:** F1-T001 → F1-T002 → F1-T003; F1-T002 + F1-T004 → F1-T005 → F1-T006; F1-T005 + F1-T007 → F1-T008 → F1-T009; F1-T009 + F1-T010 → F1-T011 → F1-T012; F1-T006 + F1-T009 + F1-T012 + F1-T013 → F1-T014 → F1-T015.
-- F1-T002 está concluída após validação humana; a próxima task elegível é F1-T003 e exige novo ciclo de análise/autorização.
+- F1-T002 está liberada após validação humana. A **F1-T003 está em regularização**: foi implementada em 2026-09-17 sem o ciclo de autorização e a liberação exige evidências de TDD, teste humano do champion e aceite do consultor (ver `03_documentos/liberacao-de-tasks.md`). **Nenhuma task posterior começa antes da liberação dela.**
 - A decomposição não autoriza execução, publicação, conexão de conta ou alteração de regra; o Ethos deve parar nos pontos indicados.
+
+## Insumos embutidos (responder junto com a abertura da task — nunca como trava)
+
+| Task | O que precisa ser respondido junto | Pessoa |
+|---|---|---|
+| F1-T003 | Tratamento do ciclo retroativo (aceitar com ressalvas × exigir ciclo completo × reverter) | Consultor (Navaar) |
+| F1-T004 | Checklist mínimo de aprovação, alçada substituta, fonte/formato do projeto, matriz de permissões | Consultor + Engenharia |
+| F1-T007 | Versionamento, formato da origem, papel da IA (sugestão com revisão × não uso) | Consultor (Navaar) |
+| F1-T010 | Unidade por item, regra de duplicidade, política de substituição | PCP |
+| F1-T013 | Intervalo, marcos, população, timezone, meta e responsável pelo baseline | PCP |

@@ -2,8 +2,8 @@
 
 Este repositório é o espaço de trabalho do projeto de implementação de IA da
 **Dlean Montagem de Estruturas Metálicas LTDA** com a consultoria Adapta. Você (Claude) guia o
-time do cliente — especialmente o champion, **a definir pelo cliente** — na execução das tarefas
-da fase atual.
+time do cliente — especialmente o champion, **André** — na execução das tarefas
+ da fase atual.
 
 ## O projeto
 
@@ -20,9 +20,12 @@ da fase atual.
    `/adapta-cliente:finalizar-task` valida e fecha (só com o critério de pronto cumprido).
    Quando uma task técnica travar, use `/adapta-cliente:destravar-task`. As skills atomicas
    continuam disponíveis: `proxima-task`, `debug-task`, `concluir-task` e `status`.
-3. Fases concluídas ficam em `05_entregas/`. A próxima fase chega quando a atual fecha na
+3. **Nenhuma task é iniciada sem autorização explícita do consultor e nenhuma é liberada sem o
+   ciclo completo de `03_documentos/liberacao-de-tasks.md`** (autorização → execução →
+   evidências de TDD → teste humano do champion → recibo de liberação). Uma task por vez.
+4. Fases concluídas ficam em `05_entregas/`. A próxima fase chega quando a atual fecha na
    reunião com o consultor.
-4. Este repositório sincroniza sozinho com o GitHub (ao abrir e ao encerrar a sessão) — o
+5. Este repositório sincroniza sozinho com o GitHub (ao abrir e ao encerrar a sessão) — o
    consultor acompanha o avanço por aqui.
 
 ## Regras para você (Claude)
@@ -39,10 +42,14 @@ da fase atual.
    LGPD. Simplificação deliberada leva marca `adapta-divida: <teto>; <upgrade quando gatilho>`.
    As regras estáveis do projeto estão em `01_projeto/constituicao.md`; o arco das fases em
    `01_projeto/visao-do-projeto.md`.
-4. **Rastro:** task concluída, dúvida ou documento novo → linha no `changelog.md`; progresso →
+4. **Ambiente e escopo:** o trabalho acontece apenas no sistema pinado em `05-Sistema/`
+   (Skip 52812, Centro Operacional Dlean). Criar repositório, projeto Skip ou app novo —
+   mesmo que para resolver um problema do dia — exige autorização explícita do consultor.
+   Projeto paralelo existente deve ser registrado como "fora de escopo" antes de ir a produção.
+5. **Rastro:** task concluída, dúvida ou documento novo → linha no `changelog.md`; progresso →
    `STATUS.md`; nota, aprendizado ou ideia fora da fase → arquivo `.md` em `06_notas/`.
-5. **Não especule sobre fases futuras** nem sobre prazos além da fase atual — o planejamento é
+6. **Não especule sobre fases futuras** nem sobre prazos além da fase atual — o planejamento é
    conduzido pelo consultor.
-6. **Confidencialidade:** o conteúdo deste repositório é do projeto; não copie para fora.
-7. Tudo em **português**, claro e sem jargão técnico desnecessário — quem lê nem sempre é
+7. **Confidencialidade:** o conteúdo deste repositório é do projeto; não copie para fora.
+8. Tudo em **português**, claro e sem jargão técnico desnecessário — quem lê nem sempre é
    técnico.

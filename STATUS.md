@@ -1,27 +1,28 @@
 # STATUS — Projeto Centro Operacional Dlean
 
-> **Atualizado em:** 2026-09-17 · **Por:** Ethos (Jarbas)
+> **Atualizado em:** 2026-09-30 · **Por:** Adapta (consultor Navaar)
 > O painel do projeto: fase atual, progresso e o que precisa de atenção.
 
 ## Onde estamos
 
-- **Fase atual:** Fase 1 — entrada de demanda, projeto e lista de materials · aberta em 2026-08-26
-- **Objetivo desta fase:** conduzir um pedido/projeto de teste até a validação da Engenharia e uma lista de materials versionada, registrando o baseline.
-- **No prazo?** Em andamento — F1-T001 e F1-T002 concluídas; F1-T003 é a próxima task técnica, condicionada ao novo ciclo de análise/autorização.
+- **Fase atual:** Fase 1 — entrada de demanda, projeto e lista de materiais · aberta em 2026-08-26
+- **Objetivo desta fase:** conduzir um pedido/projeto de teste até a validação da Engenharia e uma lista de materiais versionada, registrando o baseline.
+- **No prazo?** Em andamento — F1-T001 e F1-T002 concluídas e liberadas.
+- **Atenção (regularização em curso):** a F1-T003 foi implementada em 2026-09-17 sem o ciclo de autorização. Está **em regularização** — a liberação exige evidências de TDD, teste humano do champion e aceite do consultor. O ciclo de liberação passa a valer para esta e todas as tasks posteriores (ver `03_documentos/liberacao-de-tasks.md`).
 
 ## Progresso da fase
 
-- **Tasks:** 2/15 (13%)
-- **Próxima task do champion:** F1-T003 — implementar bordas, duplicidade, pendência, cancelamento e prova final da entrada (ainda não iniciada; requer novo ciclo de análise e autorização).
+- **Tasks:** 2/15 liberadas (13%) · 1 em regularização (F1-T003) · 12 bloqueadas
+- **Próxima task:** definida após a decisão do consultor sobre a liberação da F1-T003; nenhuma task posterior começa antes disso.
 
 ## Travas ativas
 
-| Trava | Desde | Quem resolve | Ação em curso |
+| Trava | Desde | Quem resolve | O que destrava (responder junto com a abertura da task) |
 |---|---|---|---|
-| F1-T004 — decisões da Engenharia | 2026-08-26 | Consultor (Navaar) | Aguardando definição de checklist, alçada e fonte do projeto |
-| F1-T007 — contrato da lista | 2026-08-26 | Consultor (Navaar) | Aguardando definição de versionamento, formato e papel da IA |
-| F1-T010 — catálogo e substituição | 2026-08-26 | PCP | Aguardando definição de unidade, duplicidade e política de substituição |
-| F1-T013 — baseline e métricas | 2026-08-26 | PCP | Aguardando definição de intervalo, marcos e fórmula |
+| F1-T004 — decisões da Engenharia | 2026-08-26 | Consultor (Navaar) + Engenharia | Checklist mínimo de aprovação, alçada substituta, fonte/formato do projeto e matriz de permissões da Engenharia |
+| F1-T007 — contrato da lista | 2026-08-26 | Consultor (Navaar) | Versionamento, formato da origem e papel permitido da IA (sugestão ou não uso) |
+| F1-T010 — catálogo e substituição | 2026-08-26 | PCP | Unidade de medida, regra de duplicidade e política de substituição |
+| F1-T013 — baseline e métricas | 2026-08-26 | PCP | Intervalo, marcos, população, timezone, meta e responsável pelo baseline |
 
 ## Entregas concluídas
 
